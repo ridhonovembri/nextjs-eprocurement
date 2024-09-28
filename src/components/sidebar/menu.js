@@ -2,14 +2,14 @@
 import React, { useState } from "react";
 import {
   Box,
-  Collapse,
   List,
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
 } from "@mui/material";
-import HomeIcon from "@mui/icons-material/Home";
+import HomeIcon  from "@mui/icons-material/Home";
+import PersonIcon  from "@mui/icons-material/Person";
+import FitbitIcon from '@mui/icons-material/Fitbit';
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
@@ -29,13 +29,13 @@ const Menu = () => {
         </ListItemButton>
         <ListItemButton componenet="a" href="/user">
           <ListItemIcon>
-            <HomeIcon />
+            <PersonIcon />
           </ListItemIcon>
           <ListItemText primary="Users" />
         </ListItemButton>
         <ListItemButton componenet="a" href="/material">
           <ListItemIcon>
-            <HomeIcon />
+            <FitbitIcon />
           </ListItemIcon>
           <ListItemText primary="Materials" />
         </ListItemButton>
