@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 import axios from "axios";
 import React from "react";
-import UserGrid from "@/components/user/userGrid";
+import UserGrid from "@/components/dashboard/user/userGrid";
 
-const UserPage = async () => {
+const User = async () => {
   const users = await axios.get("http://localhost:3005/api/users");
   // console.log(users.data)
 
@@ -16,4 +16,4 @@ const UserPage = async () => {
   );
 };
 
-export default UserPage;
+export default User;

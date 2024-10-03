@@ -21,19 +21,19 @@ const Menu = () => {
   return (
     <Box>
       <List>
-        <ListItemButton componenet="a" href="/">
+        <ListItemButton componenet="a" href="/dashboard">
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
           <ListItemText primary="Home" />
         </ListItemButton>
-        <ListItemButton componenet="a" href="/user">
+        <ListItemButton componenet="a" href="/dashboard/user">
           <ListItemIcon>
             <PersonIcon />
           </ListItemIcon>
           <ListItemText primary="Users" />
         </ListItemButton>
-        <ListItemButton componenet="a" href="/material">
+        <ListItemButton componenet="a" href="/dashboard/material">
           <ListItemIcon>
             <FitbitIcon />
           </ListItemIcon>

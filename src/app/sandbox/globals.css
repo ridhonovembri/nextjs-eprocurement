@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* height: 100%; */
+  background-color: bisque;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  min-height: 100vh;
+  border: 1px solid ;
+  background-color:aqua;
+  width: 100%;
+  
+}
+
+.box {
+  height: 50%;
+  /* height: 100px; */
+  /* width: 25%; */
+  background-color: brown;
+}

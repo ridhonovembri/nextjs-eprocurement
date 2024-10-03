@@ -3,7 +3,7 @@ import { AppBar, Box, Stack, Toolbar, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
 
-const Navbar = () => {
+const NavbarDashboard = () => {
   return (
     <AppBar position="sticky">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", backgroundColor:theme.palette.primary.light  }}>
@@ -16,4 +16,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarDashboard;

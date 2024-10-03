@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import Menu from "./menu";
 
-const Sidebar = () => {
+const SidebarDashboard = () => {
   return (
     <Box flex={1} sx={{ minHeight: "92vh" }}>
       <Box position="fixed">
@@ -12,4 +12,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarDashboard;

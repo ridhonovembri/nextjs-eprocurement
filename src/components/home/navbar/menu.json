@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Beranda",
+    "url": "/"
+  },
+  {
+    "id": 2,
+    "title": "Daftar",
+    "url": "/register"
+  },
+  {
+    "id": 3,
+    "title": "Berita",
+    "url": "/news"
+  },
+  {
+    "id": 4,
+    "title": "Masuk",
+    "url": "/login"
+  }
+]
