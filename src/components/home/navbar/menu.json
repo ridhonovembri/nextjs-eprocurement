@@ -6,13 +6,13 @@
   },
   {
     "id": 2,
-    "title": "Daftar",
-    "url": "/register"
+    "title": "Berita",
+    "url": "/news"
   },
   {
     "id": 3,
-    "title": "Berita",
-    "url": "/news"
+    "title": "Daftar",
+    "url": "/register"
   },
   {
     "id": 4,
