@@ -1,0 +1,49 @@
+.container{
+    margin-top: 70px;
+    padding: 0 300px;   
+}
+
+.main {
+    text-align: justify;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;    
+}
+
+.title{
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.subtitle{  
+    font-size: 14px;
+    margin: 10px 10px;
+    background-color: #b3e5fc;
+    color: #000;
+    padding-left: 10px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 20px 20px;
+}
+
+.mandatory{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+    font-style: italic;
+    color: red;
+}
+
+.term {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

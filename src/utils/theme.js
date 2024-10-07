@@ -1,4 +1,3 @@
-// 'use client'
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -16,21 +15,19 @@ const theme = createTheme({
       contrastText: "#000",
     },
   },
-  typography: {
-    mystyle1: {
-      // fontFamily: "Roboto, Helvetica, Arial, sans-serif", // Using Material-UI Typography with Merriweather
-      fontWeight: 600,
-      fontSize: "4rem",
-      lineHeight: 1.2,
-    },
-    mystyle2: {
-      // fontFamily: "Montserrat, sans-serif", // Using Material-UI Typography with Montserrat
-      fontWeight: 400,
-      fontSize: "2rem",
-      lineHeight: 1.5,
-      color: 'red'
-    },
-    // Define other variants similarly
+  typography: {    
+    fontFamily: [
+        'Arial',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),    
   },
 });
 

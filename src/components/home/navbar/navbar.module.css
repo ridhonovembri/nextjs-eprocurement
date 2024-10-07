@@ -1,9 +1,9 @@
 .container {
-    min-height: 80px;
+    /* min-height: 80px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: #01579b;
 }
 
 .links {
@@ -11,8 +11,8 @@
     align-items: center;
     gap: 20px;
     font-size: 16px;
-    margin-right: 4opx;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    /* margin-right: 40px; */
+    
 }
 
 .logo {

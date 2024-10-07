@@ -11,7 +11,7 @@ const NavbarHome = () => {
       <Toolbar className={styles.container}>
         <div className={styles.logo}>
           <Image src="/logo.png" width={70} height={70} alt="" />
-          <Link href="/">e-procurement</Link>
+          <Link href="/">e-Proc Batamindo</Link>
         </div>
         <div className={styles.links}>
           {Links.map((link) => (
