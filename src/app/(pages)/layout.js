@@ -20,9 +20,6 @@ export default function RootLayout({ children }) {
           <StyledTheme>
             <div className='container'>
               <NavbarHome />
-              {/* <Slider /> */}
-              {/* <div className={styles.main}>{children}</div> */}
-              {/* <div>{children}</div> */}
               {children}
               <FooterHome />
             </div>
