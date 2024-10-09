@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.css";
 import {
   Button,
   TextField,
@@ -16,9 +15,9 @@ import {
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import axios from "axios";
+import styles from "./page.module.css";
 
-const Register = () => {
+const RegisterVendor = () => {
   const [companyType, setCompanyType] = useState("");
   const [establishDate, setEstablishDate] = useState(null);
   const [companyPermit, setCompanyPermit] = useState("");
@@ -33,24 +32,20 @@ const Register = () => {
   const [subDistricts, setSubDistricts] = useState([{}]);
 
   const fetchProvince = async () => {
-    const response = await axios.get("/api/provinces/");
-    const data = response.data;
+    const res = await fetch("/api/provinces/");
+    const data = await res.json();
     setProvinces(data);
   };
 
   const fetchDistrict = async (code) => {
-    // console.log('code', code)
-    const response = await axios.get(`/api/districts?id=${code}`);
-    const data = response.data.data;
-    // console.log('data district client==>', data)
+    const res = await fetch(`/api/districts?id=${code}`);
+    const data = await res.json();
     setDistricts(data);
   };
 
   const fetchSubDistrict = async (code) => {
-    // console.log('code', code)
-    const response = await axios.get(`/api/subdistricts?id=${code}`);
-    const data = response.data.data;
-    // console.log('data district client==>', data)
+    const res = await fetch(`/api/subdistricts?id=${code}`);
+    const data = await res.json();
     setSubDistricts(data);
   };
 
@@ -84,7 +79,6 @@ const Register = () => {
 
   const handleOfficeDistrict = (event) => {
     const code = event.target.value;
-    // console.log(code);
     setOfficceDistrict(code);
 
     fetchSubDistrict(code);
@@ -92,7 +86,6 @@ const Register = () => {
 
   const handleOfficeSubdistrict = (event) => {
     const code = event.target.value;
-    // console.log(code);
     setOfficeSubDistrict(code);
   };
 
@@ -242,8 +235,8 @@ const Register = () => {
               label="Pilih Propinsi"
               onChange={handleOfficeProvince}
             >
-              {provinces.map((data) => (
-                <MenuItem key={data.code} value={data.code}>
+              {provinces.map((data, index) => (
+                <MenuItem key={index} value={data.code}>
                   {data.name}
                 </MenuItem>
               ))}
@@ -257,8 +250,8 @@ const Register = () => {
               label="Pilih Kabupaten"
               onChange={handleOfficeDistrict}
             >
-              {districts.map((data) => (
-                <MenuItem key={data.code} value={data.code}>
+              {districts.map((data, index) => (
+                <MenuItem key={index} value={data.code}>
                   {data.name}
                 </MenuItem>
               ))}
@@ -274,8 +267,8 @@ const Register = () => {
               label="Pilih Kecamatan"
               onChange={handleOfficeSubdistrict}
             >
-              {subDistricts.map((data) => (
-                <MenuItem key={data.code} value={data.code}>
+              {subDistricts.map((data, index) => (
+                <MenuItem key={index} value={data.code}>
                   {data.name}
                 </MenuItem>
               ))}
@@ -332,4 +325,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterVendor;

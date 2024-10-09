@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form}>
-        <TextField id="input-username" label="User Name" size="medium" />
+        <TextField id="input-username" label="Email" size="medium" />
         <TextField
           id="input-password"
           label="Password"
@@ -18,7 +18,7 @@ const Login = () => {
       </form>
       <div className={styles.misc}>
         <Link href="#">Lupa password?</Link>
-        <Link href="#">Daftar Baru</Link>
+        <Link href="/register/account">Daftar Baru</Link>
       </div>
     </div>
   );
