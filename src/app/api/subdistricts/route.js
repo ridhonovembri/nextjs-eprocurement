@@ -1,22 +1,25 @@
 import axios from "axios";
 import { NextResponse } from "next/server";
 
-export const GET = async (req, res) => {
+export const GET = async (req) => {
   const { searchParams } = new URL(req.url);
   const id = searchParams.get("id");
-  // console.log("id", id);
 
   let data = [];
+  try {
+    if (id !== null) {
+      const res = await axios.get(
+        `https://wilayah.id/api/districts/${id}.json`
+      );
 
-  if (id > 0) {
-    const response = await axios.get(
-      `https://wilayah.id/api/districts/${id}.json`
-    );
+      data = await res.data.data;
+    }
 
-    data = response.data
+    return new NextResponse(JSON.stringify(data), { status: 200 });
+  } catch (err) {
+    console.log(err);
+    return new NextResponse(JSON.stringify(err.message), {
+      status: 500,
+    });
   }
-
-  // console.log('data==>', data)
-
-  return new NextResponse(JSON.stringify(data), { status: 200 });
 };
